@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="author" content="John Doe">
+    <meta name="author" content="zhouop0">
 
 
 
@@ -69,7 +69,7 @@
         <header>
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
+            <div class="navbar-header header-logo"><a href="/">zhouop0&#39;s Blog</a></div>
             <div class="menu navbar-right">
                 
                     <a class="menu-item" href="/archives">Posts</a>
@@ -91,7 +91,7 @@
         <div class="container">
             <div class="navbar-header">
                 <div>
-                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                    <a href="/">zhouop0&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
                 </div>
                 <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
             </div>
@@ -200,7 +200,7 @@
             
                 <div class="post-meta">
                     
-                        Author: <a itemprop="author" rel="author" href="/">John Doe</a>
+                        Author: <a itemprop="author" rel="author" href="/">zhouop0</a>
                     
 
                     
@@ -208,6 +208,13 @@
                         Date: <a href="#">八月 8, 2023&nbsp;&nbsp;14:27:30</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
+                            
+                        </span>
                     
                 </div>
             
@@ -217,31 +224,73 @@
             <h2 id="从零搭建github博客"><a href="#从零搭建github博客" class="headerlink" title="从零搭建github博客"></a>从零搭建github博客</h2><p>采用 Github Pages + Hexo 的方式，搭建个人博客。</p>
 <h2 id="一-准备工作"><a href="#一-准备工作" class="headerlink" title="一.准备工作"></a>一.准备工作</h2><p><strong>1. 使用个人 GitHub 创建仓库，并配置 GitHub Pages</strong></p>
 <p><em>注意: 此仓库用于存放个人博客页面，仓库名必须使用 .github.io格式。</em></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Someone&#x27;s Blog&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Hello, Blog World ~&lt;/h1&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">````</span><br><span class="line"></span><br><span class="line">在 `&lt;GitHub用户名&gt;.github.io` 仓库对应的 GitHub Pages 设置页面 (访问路径为Settings -&gt; Pages) 可以找到个人博客的主页访问地址：https://&lt;GitHub 用户名&gt;.github.io。</span><br><span class="line"></span><br><span class="line">若能在浏览器中正常访问该地址，即代表个人 GitHub Pages 搭建成功。</span><br><span class="line"></span><br><span class="line">**2. 安装NodeJS环境**</span><br><span class="line"></span><br><span class="line">##### 环境</span><br><span class="line"></span><br><span class="line">* 操作系统：MAC OS X</span><br><span class="line"></span><br><span class="line">##### 安装步骤：</span><br><span class="line"></span><br><span class="line">* 通过homebrew的方式安装</span><br><span class="line"></span><br><span class="line">`brew install node`</span><br><span class="line"></span><br><span class="line">* 通过官网下载形式安装</span><br><span class="line"></span><br><span class="line">[https://nodejs.org/en/]()</span><br><span class="line"></span><br><span class="line">二 、安装Hexo</span><br><span class="line">--------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*此处只列出本次所需的关键步骤，更多说明详见官方文档：https://hexo.io/zh-cn/*</span><br><span class="line"></span><br><span class="line">##### 1.全局安装hexo-cli工具</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>1 npm install -g hexo-cli<br>2 hexo -v # 查看版本，目前最新版本为4.3.1</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 2.创建一个项目my-blog并初始化</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>1 hexo init my-blog<br>2 cd my-blog<br>3 npm install</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 3.生成网页文件 &amp;本地启动</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>1 hexo generate # 生成页面，此命令可以简写为 <code>hexo g</code><br>2 hexo server # 本地启动，可简写为 <code>hexo s</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">通过`hexo g`生成的页面在项目public目录下；</span><br><span class="line">使用`hexo clean`命令可以清理生产的页面文件。当配置未生效时，建议执行清理命令。</span><br><span class="line"></span><br><span class="line">##### 3.本地访问</span><br><span class="line"></span><br><span class="line">浏览器访问: http://localhost:4000/ 会看到一个比较简陋的页面。 下面介绍如何更换主题。</span><br><span class="line"></span><br><span class="line">三 、安装&amp;配置主题</span><br><span class="line">-------------------</span><br><span class="line"></span><br><span class="line">按照前两节所介绍的步骤，我们已经能够通过本地访问博客夜间了，但是Hexo默认主题并不好看。</span><br><span class="line"></span><br><span class="line">官方提供了数百种主题可以选择，根据个人喜好更换，具体可以点击[https://hexo.io/themes/](https://hexo.io/themes/)查看</span><br><span class="line"></span><br><span class="line">1.选择一款主题，如下图：</span><br><span class="line"></span><br><span class="line">&#123;% asset_path 1.png this is an image %&#125;</span><br><span class="line"></span><br><span class="line">我们点击Chic，进入主题仓库https://github.com/Siricee/hexo-theme-Chic</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>1 cd themes   # 此目录为my-blog代码目录中themes目录<br>2 git clone <a target="_blank" rel="noopener" href="https://github.com/Siricee/hexo-theme-Chic.git">https://github.com/Siricee/hexo-theme-Chic.git</a> chic</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.配置我们下载好的主题</span><br><span class="line"></span><br><span class="line">修改 my-blog/_config.yml文件中的theme属性</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>theme: chic</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">保存，然后</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>hexo s</p>
-<pre><code>
-启动我们的博客进行预览
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Someone&#x27;s Blog&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Hello, Blog World ~&lt;/h1&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-&#123;% asset_path 2.png %&#125;
+<p>在 <code>&lt;GitHub用户名&gt;.github.io</code> 仓库对应的 GitHub Pages 设置页面 (访问路径为Settings -&gt; Pages) 可以找到个人博客的主页访问地址：https:&#x2F;&#x2F;&lt;GitHub 用户名&gt;.github.io。</p>
+<p>若能在浏览器中正常访问该地址，即代表个人 GitHub Pages 搭建成功。</p>
+<p><strong>2. 安装NodeJS环境</strong></p>
+<h5 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h5><ul>
+<li>操作系统：MAC OS X</li>
+</ul>
+<h5 id="安装步骤："><a href="#安装步骤：" class="headerlink" title="安装步骤："></a>安装步骤：</h5><ul>
+<li>通过homebrew的方式安装</li>
+</ul>
+<p><code>brew install node</code></p>
+<ul>
+<li>通过官网下载形式安装</li>
+</ul>
+<p><a href="">https://nodejs.org/en/</a></p>
+<h2 id="二-、安装Hexo"><a href="#二-、安装Hexo" class="headerlink" title="二 、安装Hexo"></a>二 、安装Hexo</h2><p><em>此处只列出本次所需的关键步骤，更多说明详见官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></em></p>
+<h5 id="1-全局安装hexo-cli工具"><a href="#1-全局安装hexo-cli工具" class="headerlink" title="1.全局安装hexo-cli工具"></a>1.全局安装hexo-cli工具</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 npm install -g hexo-cli</span><br><span class="line">2 hexo -v # 查看版本，目前最新版本为4.3.1</span><br></pre></td></tr></table></figure>
 
-可以看到修改成功。
+<h5 id="2-创建一个项目my-blog并初始化"><a href="#2-创建一个项目my-blog并初始化" class="headerlink" title="2.创建一个项目my-blog并初始化"></a>2.创建一个项目my-blog并初始化</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 hexo init my-blog</span><br><span class="line">2 cd my-blog</span><br><span class="line">3 npm install</span><br></pre></td></tr></table></figure>
 
-3.对博客内容进行修改，只需修改chic目录中的配置即可.
+<h5 id="3-生成网页文件-本地启动"><a href="#3-生成网页文件-本地启动" class="headerlink" title="3.生成网页文件 &amp;本地启动"></a>3.生成网页文件 &amp;本地启动</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 hexo generate # 生成页面，此命令可以简写为 `hexo g`</span><br><span class="line">2 hexo server # 本地启动，可简写为 `hexo s`</span><br></pre></td></tr></table></figure>
 
-&#123;% asset_path 3.png %&#125;
+<p>通过<code>hexo g</code>生成的页面在项目public目录下；<br>使用<code>hexo clean</code>命令可以清理生产的页面文件。当配置未生效时，建议执行清理命令。</p>
+<h5 id="3-本地访问"><a href="#3-本地访问" class="headerlink" title="3.本地访问"></a>3.本地访问</h5><p>浏览器访问: <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 会看到一个比较简陋的页面。 下面介绍如何更换主题。</p>
+<h2 id="三-、安装-配置主题"><a href="#三-、安装-配置主题" class="headerlink" title="三 、安装&amp;配置主题"></a>三 、安装&amp;配置主题</h2><p>按照前两节所介绍的步骤，我们已经能够通过本地访问博客夜间了，但是Hexo默认主题并不好看。</p>
+<p>官方提供了数百种主题可以选择，根据个人喜好更换，具体可以点击<a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a>查看</p>
+<p>1.选择一款主题，如下图：</p>
+<img src="/2023/08/08/my-blog-build-remark/1.png" class="">
 
-目录中source为我们的文章部分
-</code></pre>
+<p>我们点击Chic，进入主题仓库<a target="_blank" rel="noopener" href="https://github.com/Siricee/hexo-theme-Chic">https://github.com/Siricee/hexo-theme-Chic</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 cd themes   # 此目录为my-blog代码目录中themes目录</span><br><span class="line">2 git clone https://github.com/Siricee/hexo-theme-Chic.git chic</span><br></pre></td></tr></table></figure>
+
+<p>2.配置我们下载好的主题</p>
+<p>修改 my-blog&#x2F;_config.yml文件中的theme属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: chic</span><br></pre></td></tr></table></figure>
+
+<p>保存，然后</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>启动我们的博客进行预览</p>
+<img src="/2023/08/08/my-blog-build-remark/2.png" class="">
+
+<p>可以看到修改成功。</p>
+<p>3.对博客内容进行修改，只需修改chic目录中的配置即可.</p>
+<img src="/2023/08/08/my-blog-build-remark/3.png" class="">
+
+<p>目录中source为我们的文章部分</p>
+<h2 id="四、创建文章"><a href="#四、创建文章" class="headerlink" title="四、创建文章"></a>四、创建文章</h2><p>修改 <code>_config.yml</code> 文件。这项配置是为了在生成文章的同时生成一个同名的目录用于存放图片等资源文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+
+<p>创建名为my-blog-build-test文章.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post my-blog-build-test</span><br></pre></td></tr></table></figure>
+
+<p>设置文章的标题以及其他元数据信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 使用hexo创建测试文章</span><br><span class="line">date: 2023-08-09 14:57:38</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>如上命令执行成功后，在source&#x2F;_posts目录下生成了一个Markdown文件和一个同名的资源目录</p>
+<p>在source&#x2F;_posts&#x2F;my-blog-build-test目录中放置一个图片文件1.png</p>
+<p>整体目录结构如下：</p>
+
+
+<p>然后在文章的Markdown文件里，通过一下方式即可引用对应的图片</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 1.png %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>图片的引用方式有多种，更多详细介绍可以参考官方文档<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders.html">https://hexo.io/zh-cn/docs/asset-folders.html</a></p>
+<p>文章创建并编辑好之后，就可以通过hexo g &amp;&amp; hexo s命令启动服务，并在本地预览文章.</p>
 
         </div>
 
@@ -250,7 +299,7 @@
                 
                     <p class="copyright-item">
                         <span>Author:</span>
-                        <span>John Doe</span>
+                        <span>zhouop0</span>
                     </p>
                 
                 
@@ -268,7 +317,7 @@
                 
                      <p class="copyright-item">
                          <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                         <span></span>
                      </p>
                 
 
@@ -279,6 +328,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/%E6%97%A5%E5%B8%B8/"># 日常</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -301,7 +354,7 @@
             </div>
             <footer id="footer" class="footer">
     <div class="copyright">
-        <span>© John Doe | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+        <span>© zhouop0 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
 </footer>
 
